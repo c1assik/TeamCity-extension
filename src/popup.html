@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/css/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="css/options.css">
+
+</head>
+
+<body>
+
+  <div>
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample">
+        TeamCity Settings
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <div id="tc-config">
+          <div>
+            <label for="tc-rest-token">REST API Token: </label>
+            <input type="text" id="tc-rest-token">
+          </div>
+          <div>
+            <label for="tc-rest-csrf">CSRF Token: </label>
+            <input type="text" id="tc-rest-csrf">
+          </div>
+          <div>
+            <label for="tc-url">TeamCity URL: </label>
+            <input type="text" id="tc-url">
+          </div>
+          <div>
+            <button type="button" id="save-options" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <input type="text" value="" id="tagsinput" placeholder="keywords for search" data-role="tagsinput">
+    <button type="button" id="refresh" class="btn btn-primary">Find</button>
+  </div>
+
+  <div class="itemInfo" id="itemInfo" style="display: inline-block;">
+  </div>
+
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="dist/js/bootstrap-tagsinput.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "TeamCity booster",
+  "description": "teamcity booster is a web extension to push build in queue",
+  "version": "1.0.0",
+  "icons": {
+    "128": "img/tc_logo_128.png"
+  },
+
+  "browser_action": {
+    "default_icon": "img/tc_logo_128.png",
+    "default_title": "TeamCity booster",
+    "default_popup": "popup.html"
+  },
+
+  "options_ui": {
+    "page": "popup.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["js/options.js"]
+  }],
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "popup"
+  ]
+}

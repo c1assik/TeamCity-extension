@@ -1,0 +1,25 @@
+body {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: blue;
+}
+
+
+hr {
+  margin: 20px 0;
+}
+
+section {
+  margin: 40px 0;
+}
+
+div {
+  margin: 5px 5px;
+}
+
+
+.bootstrap-tagsinput .tag {
+  margin-right: 2px;
+  color: rgb(203, 0, 239);
+}
