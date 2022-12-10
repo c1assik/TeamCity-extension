@@ -51,4 +51,21 @@ export class TeamCityService implements TeamCity {
   
     return xmlDoc
   }
+
+  getPojectParams(projectId: string): Document{
+    const teamCityRestApiParams = `${this.teamCityUrl.origin}/app/rest/projects/${projectId}/parameters`
+    console.log(teamCityRestApiParams)
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", teamCityRestApiParams, false );
+    xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xmlHttp.setRequestHeader("X-TC-CSRF-TOKEN", this.csrf);
+
+    xmlHttp.send( null );
+
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(xmlHttp.responseText,"text/xml"); 
+  
+    return xmlDoc
+  }
+
 }

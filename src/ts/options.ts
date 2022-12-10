@@ -1,7 +1,17 @@
 import { OptionsPageHandler } from "./page-handlers/options-page-handler";
+import { ContextParamsPageHandler } from "./page-handlers/context-params-page-handler";
 import { AppConfig } from "./app-config";
 import { TeamCityService } from "./services/teamcity-service";
 
+
+if (ContextParamsPageHandler.isValidcontextParamsPage()) {
+  AppConfig.getConfig()
+  .then(config => {
+  const teamCity = new TeamCityService(config.teamCityBaseUrl, config.teamCityRestToken, config.teamCityCSRF);
+  const contextParamsPageHandler = new ContextParamsPageHandler(teamCity)
+  contextParamsPageHandler.displayContextParams()
+});
+}
 
 function MoveToTop(e){
   AppConfig.getConfig()

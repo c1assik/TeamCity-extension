@@ -4,4 +4,5 @@ export interface TeamCity {
   setTeamCityRestApiCredentials(accessToken: string, csrf:string): void;
   MovetoTop(buildId: number, access_token: string, CSRF: string): void;
   queueRequest(): Document;
+  getPojectParams(projectId: string): Document;
 }
