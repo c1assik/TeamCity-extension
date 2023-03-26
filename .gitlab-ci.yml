@@ -48,7 +48,7 @@ create:release:
     description: 'Release $TAG'
     assets:
       links:
-        - name: "*.zip"
-          url: "https://gitlab.com/<namespace>/<project_name>/-/jobs/$JOB_ID/artifacts/download"
+        - name: teamcity-booster.zip"
+          url: "https://gitlab.com/Classik/teamcity-extension/-/jobs/$JOB_ID/artifacts/download"
 
 
