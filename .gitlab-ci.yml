@@ -29,7 +29,24 @@ build:
     paths:
       - "*.zip"
 
-deploy:
-  stage: deploy
-  script: echo "Define your deployment script!"
-  environment: production
+release:
+  stage: release
+  needs:
+    - job: build
+      artifacts: true
+  variables:
+    TAG: '$CI_COMMIT_SHA'
+  script:
+    - echo "Create Release $TAG"
+    - echo $JOB_ID  
+  release:
+    name: 'Release $TAG'
+    tag_name: '$TAG'
+    ref: '$TAG'
+    description: 'Release $TAG'
+    assets:
+      links:
+        - name: "*.zip"
+          url: "https://gitlab.com/<namespace>/<project_name>/-/jobs/$JOB_ID/artifacts/download"
+
+
