@@ -115,7 +115,7 @@ export class ContextParamsPageHandler {
     const property = response.getElementsByTagName("property")
 
     for(var i = 0; i < property.length; i++){
-        if (property[i].getAttribute("name") === "Context"){
+        if (property[i].getAttribute("name") === "contextParameters"){
             return property[i].getAttribute("value")
         }
     }
