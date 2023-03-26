@@ -27,7 +27,7 @@ build:
     - npm run zip
   artifacts:
     paths:
-      - *.zip
+      - "*.zip"
 
 deploy:
   stage: deploy
