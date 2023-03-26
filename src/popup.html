@@ -12,50 +12,69 @@
 </head>
 
 <body>
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" id="movetotop">Move Build To Top</button>
+    <button class="tablinks" id="sequence">Run Builds</button>
+    <button class="tablinks" id="settings">TeamCity Settings</button>
+  </div>
 
-  <div>
-    <p>
-      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-        aria-controls="collapseExample">
-        TeamCity Settings
-      </a>
-    </p>
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body">
-        <div id="tc-config">
-          <div>
-            <label for="tc-rest-token">REST API Token: </label>
-            <input type="text" id="tc-rest-token">
-          </div>
-          <div>
-            <label for="tc-rest-csrf">CSRF Token: </label>
-            <input type="text" id="tc-rest-csrf">
-          </div>
-          <div>
-            <label for="tc-url">TeamCity URL: </label>
-            <input type="text" id="tc-url">
-          </div>
-          <div>
-            <button type="button" id="save-options" class="btn btn-primary">Save</button>
-          </div>
-        </div>
-      </div>
+  <!-- Move to Top content -->
+  <div id="movetotop_tab" class="tabcontent">
+    <h3>Move to top queuded build</h3>
+    <div>
+      <input type="text" value="" id="tagsinput" placeholder="keywords for search" data-role="tagsinput">
+      <button type="button" id="refresh" class="btn btn-primary">Find</button>
+    </div>
+
+    <div class="itemInfo" id="itemInfo" style="display: inline-block;"></div>
+  </div>
+
+  <!-- Run Builds content -->
+  <div id="sequence_tab" class="tabcontent">
+    <h3>Run multiple builds</h3>
+
+    <div>
+      <input type="text" value="" id="tagsinput2" placeholder="keywords for search" data-role="tagsinput">
+      <button type="button" id="find_build" class="btn btn-primary">Find</button>
+      <button type="button" id="clear_build" class="btn btn-primary">Clear</button>
+
+
+      <div class="itemInfo" id="BuildList" style="display: inline-block;"></div>
+      <ol id="libraries"></ol>
+
+      <button type="button" id="run_build" class="btn btn-primary">Build</button>
+
     </div>
   </div>
 
-
-  <div>
-    <input type="text" value="" id="tagsinput" placeholder="keywords for search" data-role="tagsinput">
-    <button type="button" id="refresh" class="btn btn-primary">Find</button>
+  <!-- Teamcity Settings content -->
+  <div id="settings_tab" class="tabcontent">
+    <div id="tc-config">
+      <div>
+        <label for="tc-rest-token">REST API Token: </label>
+        <input type="text" id="tc-rest-token">
+      </div>
+      <div>
+        <label for="tc-rest-csrf">CSRF Token: </label>
+        <input type="text" id="tc-rest-csrf">
+      </div>
+      <div>
+        <label for="tc-url">TeamCity URL: </label>
+        <input type="text" id="tc-url">
+      </div>
+      <div>
+        <button type="button" id="save-options" class="btn btn-primary">Save</button>
+      </div>
+    </div>
   </div>
-
-  <div class="itemInfo" id="itemInfo" style="display: inline-block;">
+  </div>
   </div>
 
   <script src="dist/js/jquery.min.js"></script>
   <script src="dist/js/bootstrap.min.js"></script>
   <script src="dist/js/bootstrap-tagsinput.js"></script>
-
+  <script src="dist/js/jquery-ui-sortable.min.js"></script>
 
 </body>
 

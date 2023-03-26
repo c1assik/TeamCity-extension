@@ -46,6 +46,14 @@ export class OptionsPageHandler {
       this.saveOptions(optionInputElements)
     });
 
+    $('#tagsinput2').on('itemAdded', () => {
+      this.saveOptions(optionInputElements)
+    });
+
+    $('#tagsinput2').on('itemRemoved', () => {
+      this.saveOptions(optionInputElements)
+    });
+
     this.getOptions(optionInputElements);
   }
 

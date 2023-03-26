@@ -36,8 +36,8 @@
   "dependencies": {
     "@types/jquery": "^3.5.14",
     "jquery": "^3.6.1",
+    "jquery-ui-sortable-npm": "^1.0.0",
     "bootstrap": "^5.2.2",
     "bootstrap-tagsinput": "^0.7.1"
-    
   }
 }

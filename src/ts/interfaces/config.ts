@@ -1,6 +1,7 @@
 export interface Config {
   teamCityRestToken: string;
   teamCityCSRF: string;
-  ProjectFilter: string;
+  buildFilter: string;
+  buildList: string;
   teamCityBaseUrl: string;
 }

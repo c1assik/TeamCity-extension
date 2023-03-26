@@ -20,8 +20,7 @@ module.exports = merge(common, {
       { from: 'node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.js', to: './dist/js/' },
 
       { from: 'node_modules/jquery/dist/jquery.min.js', to: './dist/js/' },
-
-
+      { from: 'node_modules/jquery-ui-sortable-npm/jquery-ui-sortable.min.js', to: './dist/js/' },
     ])
   ]
 });
