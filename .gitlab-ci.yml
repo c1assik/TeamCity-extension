@@ -9,7 +9,7 @@
 
 # Official framework image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/node/tags/
-image: node:latest
+
 
 # This folder is cached between builds
 # https://docs.gitlab.com/ee/ci/yaml/index.html#cache
@@ -19,6 +19,7 @@ cache:
 
 build:
   stage: build
+  image: node:latest
   script:
     - npm i zip-dist
     - npm install
@@ -31,6 +32,7 @@ build:
 
 create:release:
   stage: deploy
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
   needs:
     - job: build
       artifacts: true
