@@ -18,12 +18,16 @@ cache:
     - node_modules/
 
 build:
+  stage: build
   script:
     - npm i zip-dist
     - npm install
     - export NODE_OPTIONS=--openssl-legacy-provider
     - npm run build
     - npm run zip
+  artifacts:
+    paths:
+      - *.zip
 
 deploy:
   stage: deploy
