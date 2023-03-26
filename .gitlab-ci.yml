@@ -29,7 +29,7 @@ build:
     paths:
       - "*.zip"
 
-release:
+create:release:
   stage: release
   needs:
     - job: build
