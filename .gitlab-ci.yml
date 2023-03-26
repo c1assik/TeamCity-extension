@@ -30,7 +30,7 @@ build:
       - "*.zip"
 
 create:release:
-  stage: release
+  stage: deploy
   needs:
     - job: build
       artifacts: true
