@@ -1,11 +1,12 @@
 {
   "name": "teamcity-booster",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "teamcity-booster is a web extension to push build in queue",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config=webpack/webpack.dev.js --watch",
-    "build": "webpack --config=webpack/webpack.prod.js"
+    "build": "webpack --config=webpack/webpack.prod.js",
+    "zip": "npm-build-zip --source=dist"
   },
   "author": {
     "name": "Vladimir Milyutin"
@@ -35,9 +36,10 @@
   },
   "dependencies": {
     "@types/jquery": "^3.5.14",
+    "bootstrap": "^5.2.2",
+    "bootstrap-tagsinput": "^0.7.1",
     "jquery": "^3.6.1",
     "jquery-ui-sortable-npm": "^1.0.0",
-    "bootstrap": "^5.2.2",
-    "bootstrap-tagsinput": "^0.7.1"
+    "zip-dist": "^1.0.0"
   }
 }

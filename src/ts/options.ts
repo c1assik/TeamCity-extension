@@ -110,7 +110,7 @@ function findBuild() {
               const para = document.createElement("p");
               const br = document.createElement("br");
 
-              para.innerText = `${projectId}`;
+              para.innerText = `${buildId}`;
               para.id = 'p-' + i;
               para.setAttribute("class", "inline");
               para.style.cssText = "display: inline-block;"
